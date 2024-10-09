@@ -1,28 +1,32 @@
-/*  ============= WEB BROWSER RESETS ============ */
-body { background-color: lightgreen; }
-* { margin: 0; padding: 0; border: none }
-*, *::before, *::after { box-sizing: border-box }
-html { height: 100%; font-size: 100%; font: inherit; vertical-align: baseline;
-scroll-behavior: smooth; scroll-padding-top: 20px }
-body { line-height: 1.5; min-height: 100vh }
-@media (max-width: 767px ) { body { text-rendering: optimizeSpeed } }
-@media (min-width: 768px ) { body { text-rendering: optimizeLegibility } }
-img { width: 100%; height: auto; display: block }
-input, button, textarea, select { font: inherit }
-
-/* Desktops */
-@media (min-width: 768px) {
-    body { padding: 4% 20% }
- }
- 
- /* Mobiles */
- @media (max-width: 767px) {
-    body { padding: 8% 5% }
- }
-
 body {
+    background-image: url('../img/mountain-magic-hour.jpg'); /* Use your actual image path */
+    background-size: cover;        /* Ensure the image covers the entire screen */
+    background-position: center;   /* Center the image */
+    background-repeat: no-repeat;  /* Prevent repeating */
+    height: 100vh;                 /* Viewport height - makes sure the background covers from top to bottom */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    color: #f0f0f0; /* Light gray for better contrast */
     text-align: center;
-    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+/* Add a semi-transparent background behind text */
+.text-container {
+    background-color: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
+    padding: 20px;
+    border-radius: 10px; /* Optional: rounded corners */
+    width: 80%; /* Adjust as necessary */
+    max-width: 800px;
+    margin: 0 auto; /* Center the container */
+}
+
+h1, h2, h3, p, a {
+    color: #ffffff; /* Pure white for text */
 }
 
 h1 {
@@ -52,5 +56,36 @@ p {
     font-size: 20px;
     margin-bottom: 16px;
 }
-a { color: darkgreen; }
 
+a {
+    color: #E6E6FA;
+    text-decoration: none;
+}
+
+/* Desktops */
+@media (min-width: 768px) {
+    body { padding: 4% 20% }
+}
+
+/* Mobiles */
+@media (max-width: 767px) {
+    body { padding: 8% 5% }
+}
+
+@media (max-width: 767px ) { 
+    body { text-rendering: optimizeSpeed } 
+}
+
+@media (min-width: 768px ) { 
+    body { text-rendering: optimizeLegibility } 
+}
+
+img { 
+    width: 100%; 
+    height: auto; 
+    display: block; 
+}
+
+input, button, textarea, select { 
+    font: inherit;
+}
